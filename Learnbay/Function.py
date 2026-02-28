@@ -4,22 +4,16 @@ def outer_fun():
     def inner_fun():
         nonlocal message
         message = 'nolocal'
-        print('inner message',message)
+        print('inner message', message)
         inner_fun()
-        print('Outer message',message)
-    
-outer_fun()
-
-
-
-message = "outer-variable"
-
-# outside function 
-def outer():
-    message = 'local'
+        print('Outer message', message)
+        outer_fun()
+        message = "outer-variable"
+        def outer():
+            message = 'local'
     print("inner:", message)
-    
-    # nested function  
+
+    # nested function
     def inner():
 
         # declare nonlocal variable
@@ -37,16 +31,10 @@ print("outside the outer_func", message)
 c = 1
 def add():
 
-    global c 
-    
+    global c
+
     c= c + 1
-    
-    print (c)   
+
+    print (c)
 
 add()
-
-
-
-
-
-    

@@ -1,17 +1,6 @@
-i=1
+i = 1
 
-for i in range(1,11):
-    
-    m=(i*5)
-    print(m)    
-    
+for i in range(1, 11):
 
-
-
-     
-    
-
-    
-
-
- 
+    m = (i*5)
+    print(m)
